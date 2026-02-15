@@ -20,19 +20,9 @@ The system progresses through 4 states based on battery health. Thresholds are d
 | **Warn 3** | Voltage < 13V | **Red LED** Flashes + **Buzzer** ON. |
 | **KILL** | Voltage < 10V OR Current > 2A | **MOSFET Disconnects Power.** |
 
-## Hardware Pinout
-*Consult with the PCB Designer (Issue #46 Assignee) to verify these pins.*
-
-| Component | RP2350 Pin | Function |
-| :--- | :--- | :--- |
-| **I2C SDA** | GPIO 4 | Data Line to BQ76920 |
-| **I2C SCL** | GPIO 5 | Clock Line to BQ76920 |
-| **Red LED** | GPIO 14 | Warning Indicator |
-| **Buzzer** | GPIO 15 | Audible Alarm |
-| **MOSFET** | GPIO 16 | Main Power Cutoff (High = ON) |
 
 ## Telemetry & Graphing
-The board outputs raw telemetry over USB Serial (baud rate 115200). You can view this data in the Arduino IDE Serial Plotter or any serial terminal.
+The board outputs raw telemetry over USB Serial (baud rate 115200). You can view this data in the serial terminal.
 
 **Data Format:**
 ```text
